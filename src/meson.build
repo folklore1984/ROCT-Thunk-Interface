@@ -10,9 +10,8 @@ srcs = ['debug.c', 'events.c', 'fmm.c',
   'queues.c', 'time.c', 'topology.c', 'version.c'
 ]
 
-hsakmtlib = shared_library('hsakmt',
+hsakmtlib = shared_module('hsakmt',
   sources: srcs, link_args : vflag,
   include_directories : inc,
   dependencies : deps,
-  version : '1.2.0', soversion : '0',
   install : true)
